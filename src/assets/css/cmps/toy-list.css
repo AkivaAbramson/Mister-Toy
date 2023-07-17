@@ -1,0 +1,12 @@
+.toy-list {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.toy-list ul li {
+  margin-block-end: 0.2rem;
+}
+
+.toy-list .btn-add {
+  margin-block-end: 0.9rem;
+}

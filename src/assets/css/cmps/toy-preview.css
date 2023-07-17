@@ -1,0 +1,20 @@
+.toy-preview .done {
+  font-weight: 100;
+  font-style: italic;
+  text-decoration: line-through;
+}
+
+.toy-preview {
+  background: #423a6f;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  padding: 0.75rem 1.25rem;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+}
+.toy-preview .tools {
+  width: 8rem;
+  justify-content: space-between;
+}
