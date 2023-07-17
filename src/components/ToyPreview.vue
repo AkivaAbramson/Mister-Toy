@@ -20,7 +20,7 @@
 </template>
 
 <script>
-import { toyService } from '../services/toy.service.local.js'
+import { toyService } from '../services/toy.service.js'
 export default {
     name: 'ToyPreview',
     props: ['toy'],
