@@ -1,8 +1,9 @@
 <template>
     <li class="toy-preview flex space-between">
-        <p>
-            {{ toy }}
-        </p>
+        <p> {{ toy.name }}</p>
+        <p> Price:{{ toy.price }}</p>
+        <!-- <br>
+        <p>in Stock? {{ toy.inStock }}</p> -->
 
         <div class="tools flex">
             <button @click="$emit('removed')" class="btn">

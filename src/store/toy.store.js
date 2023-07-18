@@ -5,9 +5,10 @@ export const toyStore = {
     toys: null,
     toysCount: null,
     currToy: null,
+    allToys:null,
     filterBy: {
       name: '',
-      status: '',
+      labels: [],
       pageIdx: 0,
       pageSize: 5,
     },
@@ -15,19 +16,28 @@ export const toyStore = {
       by: '',
       desc: 1,
     },
+    labels:[]
   },
   getters: {
     toy({ currToy }) {
       return currToy
     },
+    
+    labels({ labels }) {
+      return labels
+    },
+
     toysToDisplay({ filterBy, toys }) {
       if (!toys) return null
 
-      const { status, txt, pageIdx, pageSize } = filterBy
+      const { name, pageIdx, pageSize } = filterBy
       let filteredToys = toys
 
-      const regex = new RegExp(txt, 'i')
+      const regex = new RegExp(name, 'i')
       filteredToys = filteredToys.filter((toy) => regex.test(toy.name))
+      if (filterBy.labels && filterBy.labels.length > 0) {
+        filteredToys = filteredToys.filter(toy => filterBy.labels.every(label => toy.labels.includes(label)))
+      }   
 
       const startIdx = pageIdx * pageSize
       filteredToys = filteredToys.slice(startIdx, startIdx + pageSize)
@@ -35,6 +45,10 @@ export const toyStore = {
 
       return filteredToys
     },
+    allToys({toys}){
+      return toys
+
+    }
   },
   mutations: {
     setToys(state, { toys }) {
@@ -55,8 +69,13 @@ export const toyStore = {
       state.toys.splice(idx, 1)
     },
     setFilterBy(state, { filterBy }) {
+      // console.log(filterBy[0])
       state.filterBy = filterBy
     },
+    setLabels(state,{ labels }){
+      state.labels = labels
+      // console.log(state.labels)
+  },
   },
   actions: {
     loadToys(context) {
@@ -91,6 +110,23 @@ export const toyStore = {
         return toy
       })
     },
+    getLabels({ commit }) {
+      return toyService.getLabels()
+          .then(labels => {
+              // console.log(labels)
+              commit({ type: 'setLabels', labels})
+          })
+  },
+  allToys(context){
+    toyService
+        .query()
+        .then((toys) => {
+          return toys
+        })
+        .catch((err) => {
+          throw err
+        })
+  }
   },
   // loadToys({ commit }, { filterBy }) {
   //   toyService

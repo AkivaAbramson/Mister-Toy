@@ -1,7 +1,8 @@
 
 <template>
 	<section class="toy-app">
-    <ToyFilter @filteredTxt="debounceHandler" />
+    <Chart/>
+    <ToyFilter @filteredToys="debounceHandler" />
     <ToyList v-if="toys"
               :toys="toys"
               @removed="removeToy" />
@@ -17,6 +18,7 @@
 <script>
 import ToyList from '../components/ToyList.vue'
 import ToyFilter from '../components/ToyFilter.vue'
+import Chart from '../components/Chart.vue'
 import { utilService } from '../services/util.service.js'
 import { showErrorMsg, showSuccessMsg } from '../services/event-bus.service.js'
     export default {
@@ -26,20 +28,21 @@ import { showErrorMsg, showSuccessMsg } from '../services/event-bus.service.js'
   components: {
     ToyList,
     ToyFilter,
+    Chart,
   },
   data() {
     return {
       isLoading: false,
       filterBy: {
-        txt: '',
-        status: '',
+        name: '',
+        labels: [],
         pageIdx: 0,
         pageSize: 5,
       },
     }
   },
   created() {
-    this.debounceHandler = utilService.debounce(this.setFilterByTxt, 500)
+    this.debounceHandler = utilService.debounce(this.setFilterBy, 500)
   },
   methods: {
     removeToy(toyId) {
@@ -72,8 +75,9 @@ import { showErrorMsg, showSuccessMsg } from '../services/event-bus.service.js'
       }
       this.filterToys()
     },
-    setFilterByTxt(txt) {
-      this.filterBy.txt = txt
+    setFilterBy({name, labels}) {
+      this.filterBy.name = name
+      this.filterBy.labels = labels
       this.filterToys()
     },
     // setFilterByStatus(status) {

@@ -1,4 +1,8 @@
 import { httpService } from './http.service.js'
+import { utilService } from './util.service.js'
+
+const labels = ['On wheels', 'Box game', 'Art', 'Baby', 'Doll', 'Puzzle', 
+'Outdoor', 'Battery Powered']
 
 export const toyService = {
 	query,
@@ -6,6 +10,7 @@ export const toyService = {
 	remove,
 	save,
 	getEmptyToy,
+	getLabels,
 }
 
 function query() {
@@ -17,7 +22,7 @@ function getById(toyId) {
 }
 
 function remove(toyId) {
-	httpService.delete(`toy/${toyId}`)
+	return httpService.delete(`toy/${toyId}`)
 }
 
 function save(toy) {
@@ -28,11 +33,18 @@ function save(toy) {
 }
 
 function getEmptyToy() {
+	const startIdx = utilService.getRandomIntInclusive(0, labels.length-3)
+	const endIdx = utilService.getRandomIntInclusive(startIdx, startIdx+3)
+	const randomLabels = labels.slice(startIdx, endIdx)
 	return {
 		name: '',
 		price: 0,
-		labels: [],
+		labels: randomLabels,
 		createdAt: Date.now(),
 		inStock: false,
 	}
+}
+
+function getLabels() {
+	return Promise.resolve(labels)
 }
