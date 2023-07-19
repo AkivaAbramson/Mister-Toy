@@ -1,9 +1,10 @@
 .input {
   width: 11.5rem;
   height: 2rem;
-  background: rgb(241, 241, 218);
+  /* background: rgb(241, 241, 218); */
+  background: rgb(251, 249, 230);
   padding: 0 1rem;
-  border: 2px solid transparent;
+  border: 1px solid black;
   border-radius: 8px;
   outline: none;
   transition: 0.3s ease;

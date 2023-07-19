@@ -4,7 +4,7 @@
 	export default {
 		data() {
 			return {
-				imgUrl: '../src/assets/img/toyStore.jpg'
+				imgUrl: '../src/assets/img/toyStore1.avif'
 			}
 		},
 		created(){
@@ -28,7 +28,7 @@
 			</nav>
 		</div>
 	</header>
-	<main class="main" >
+	<main class="main-layout" >
 		<RouterView />
 	</main>
 </template>

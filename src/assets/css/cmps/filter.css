@@ -15,7 +15,8 @@
 }
 
 .label-filter select {
+  background-color: rgb(251, 249, 230);
   padding: 5px;
-  border: 2px solid rgb(6, 184, 244);
+  border: none ;
   width: 200px;
 }

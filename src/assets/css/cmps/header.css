@@ -1,26 +1,55 @@
-header {
-  background-color: rgba(255, 255, 255, 0.101);
-  border-radius: 12px;
-  padding: 1rem;
-}
-.wrapper {
+
+/* .wrapper {
   display: flex;
   justify-content: space-evenly;
-}
-
-/* header h2 {
-  font-size: 2rem;
-}
-
-header p {
-  font-size: 0.8rem;
-  margin-block-end: 0.5rem;
-}
-
-header a {
-  display: block;
-  font-size: 0.8rem;
-  color: inherit;
-  margin-block-end: 0.5rem;
-  text-align: end;
 } */
+
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.app-header {
+  position: relative;
+  z-index: 1;
+}
+
+.main-layout {
+  position: relative;
+  z-index: 1;
+}
+
+.app-header nav{
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 1.5em;
+}
+
+.home-link {
+    background-color: rgb(223, 62, 62);
+}
+
+.toy-link {
+    background-color: rgb(230, 156, 19);
+}
+
+.about-link {
+    background-color: lightgreen;
+}
+
+.nav-link {
+    padding: 10px 25px;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+.nav-link:hover {
+    opacity: 0.6;
+    cursor: pointer;
+}

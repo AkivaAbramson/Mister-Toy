@@ -1,4 +1,4 @@
-
+/* 
 .background {
   position: fixed;
   top: 0;
@@ -9,42 +9,10 @@
   object-fit: cover;
 }
 
-.app-header {
+
+.main-layout {
   position: relative;
   z-index: 1;
 }
 
-.main {
-  position: relative;
-  z-index: 1;
-}
-
-.app-header nav{
-    display: flex;
-    justify-content: space-evenly;
-    font-size: 1.5em;
-}
-
-.home-link {
-    background-color: rgb(223, 62, 62);
-}
-
-.toy-link {
-    background-color: rgb(230, 156, 19);
-}
-
-.about-link {
-    background-color: lightgreen;
-}
-
-.nav-link {
-    padding: 10px 25px;
-    color: white;
-    text-decoration: none;
-}
-
-.nav-link:hover {
-    opacity: 0.8;
-    cursor: pointer;
-}
-
+ */

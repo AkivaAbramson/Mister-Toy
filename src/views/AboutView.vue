@@ -1,6 +1,6 @@
 <template>
   <div class="about">
-    <h1>This is an about page</h1>
+    <h1>Made By Akiva</h1>
   </div>
   <GoogleMap
       api-key="API_KEY"
