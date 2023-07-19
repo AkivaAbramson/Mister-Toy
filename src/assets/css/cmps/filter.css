@@ -1,19 +1,21 @@
 .toy-filter {
-  margin-block-end: 2rem;
+  gap: 3em;
+  align-items: center;
 }
 
-.toy-filter .filter-btns {
-  border-bottom: 2px solid #495057;
-  justify-content: space-around;
-  width: 10rem;
+.label-filter {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.filter-btns .filter-btn {
-  width: 100%;
-  height: 100%;
-  cursor: pointer;
+.label-filter label {
+  margin-bottom: 5px;
 }
-.filter-btns .filter-btn.active {
-  border: 2px solid #495057;
-  border-bottom: none;
+
+.label-filter select {
+  padding: 5px;
+  border: 2px solid rgb(6, 184, 244);
+  width: 200px;
 }

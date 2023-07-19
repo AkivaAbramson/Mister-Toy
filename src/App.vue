@@ -3,7 +3,9 @@
 	
 	export default {
 		data() {
-			return {}
+			return {
+				imgUrl: '../src/assets/img/toyStore.jpg'
+			}
 		},
 		created(){
 			this.$store.dispatch({ type: 'loadToys' })
@@ -15,19 +17,19 @@
 </script>
 
 <template>
+	<img class="background" :src="imgUrl" >
 	<header>
 		
-		
-
-		<div class="wrapper">
-
+		<div class="app-header">
 			<nav>
-				<RouterLink to="/">Home</RouterLink>
-				<RouterLink to="/about">About</RouterLink>
-				<RouterLink to="/toy">Toys</RouterLink>
+				<RouterLink to="/" class="nav-link home-link">Home</RouterLink>
+				<RouterLink to="/toy" class="nav-link toy-link">Toys</RouterLink>
+				<RouterLink to="/about" class="nav-link about-link">About</RouterLink>
 			</nav>
 		</div>
 	</header>
-
-	<RouterView />
+	<main class="main" >
+		<RouterView />
+	</main>
 </template>
+

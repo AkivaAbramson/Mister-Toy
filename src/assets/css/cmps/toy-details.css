@@ -1,9 +1,5 @@
-.toy-edit form {
-  width: 20rem;
-}
 
-
-.toy-edit {
+.toy-details {
   display: flex;
   flex-direction: column;
   gap:30px;
@@ -15,29 +11,29 @@
   margin-top: 50px;
 }
 
-.toy-edit h2 {
+.toy-details h2 {
   font-size: 24px;
   margin-bottom: 10px;
 }
 
-.toy-edit h5 {
+.toy-details h5 {
   font-size: 16px;
   margin-bottom: 5px;
   color: #888;
 }
 
-.toy-edit p {
+.toy-details p {
   margin-bottom: 5px;
 }
 
-.toy-edit ul {
+.toy-details ul {
   margin: 0;
   padding: 0;
   list-style: none;
   margin-bottom: 5px;
 }
 
-.toy-edit .category-item {
+.toy-details .category-item {
   display: inline-block;
   margin-right: 10px;
   background-color: #4dba6c;
@@ -46,8 +42,7 @@
   border-radius: 4px;
 }
 
-.toy-edit .category-item:hover {
+.toy-details .category-item:hover {
   background-color: #69e106;
   cursor: default;
 }
-

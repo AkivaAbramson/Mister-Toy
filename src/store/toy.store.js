@@ -10,7 +10,7 @@ export const toyStore = {
       name: '',
       labels: [],
       pageIdx: 0,
-      pageSize: 5,
+      pageSize: 6,
     },
     sortBy: {
       by: '',

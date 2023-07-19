@@ -1,8 +1,8 @@
 
 <template>
 	<section class="toy-app">
-    <Chart/>
-    <ToyFilter @filteredToys="debounceHandler" />
+    
+    <ToyFilter class="toy-filter" @filteredToys="debounceHandler" />
     <ToyList v-if="toys"
               :toys="toys"
               @removed="removeToy" />
@@ -10,6 +10,7 @@
       <button class="btn" @click="setPage(-1)">Prev</button>
       <button class="btn" @click="setPage(1)">Next</button>
     </div>
+    <Chart/>
     <RouterView />
 </section>
 </template>
@@ -37,8 +38,9 @@ import { showErrorMsg, showSuccessMsg } from '../services/event-bus.service.js'
         name: '',
         labels: [],
         pageIdx: 0,
-        pageSize: 5,
+        pageSize: 6,
       },
+      
     }
   },
   created() {

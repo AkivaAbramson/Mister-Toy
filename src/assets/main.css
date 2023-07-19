@@ -2,19 +2,18 @@
 @import './css/basic/base.css';
 @import './css/basic/input.css';
 @import './css/basic/helpers.css';
-@import './css/basic/checkbox.css';
 @import './css/basic/button.css';
 
 /* CMPS  */
 @import './css/cmps/app.css';
 @import './css/cmps/header.css';
-@import './css/cmps/loader.css';
 @import './css/cmps/user-profile.css';
 @import './css/cmps/user-msg.css';
 @import './css/cmps/progress-bar.css';
 @import './css/cmps/filter.css';
 @import './css/cmps/toy-list.css';
 @import './css/cmps/toy-preview.css';
+@import './css/cmps/toy-details.css';
 @import './css/cmps/toy-edit.css';
 
 #app {
@@ -34,7 +33,7 @@ a,
 
 @media (hover: hover) {
   a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
+    /* background-color: hsla(160, 100%, 37%, 0.2); */
   }
 }
 

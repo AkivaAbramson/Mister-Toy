@@ -1,12 +1,7 @@
-.toy-list {
-  width: 80%;
-  margin: 0 auto;
-}
 
-.toy-list ul li {
-  margin-block-end: 0.2rem;
-}
-
-.toy-list .btn-add {
-  margin-block-end: 0.9rem;
+.toy-list ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 10px;
+  padding: 10px;
 }

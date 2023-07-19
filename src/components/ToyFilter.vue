@@ -1,12 +1,12 @@
 <template>
-	<section class="toy-filter flex space-between">
+	<section class="toy-filter flex justify-center">
         <input class="input" 
                 v-model="filterBy.name"
                 @input="setFilter" 
                 type="text"
                 placeholder="Search toy..">
-        <div>
-          <label for="labels">Labels:</label>
+        <div class="label-filter">
+          <label for="labels">Filter by Labels:</label>
           <select
             id="labels"
             multiple

@@ -1,20 +1,46 @@
-.toy-preview .done {
-  font-weight: 100;
-  font-style: italic;
-  text-decoration: line-through;
-}
 
 .toy-preview {
-  background: #423a6f;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.toy-preview ul {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border: 1px solid rgba(0, 0, 0, 0.125);
-  padding: 0.75rem 1.25rem;
-  border-top-left-radius: 0.25rem;
-  border-top-right-radius: 0.25rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
-.toy-preview .tools {
-  width: 8rem;
-  justify-content: space-between;
+
+.toy-preview ul li {
+  margin-bottom: 5px;
 }
+
+.toy-preview .actions {
+  display: flex;  
+  margin-top: 10px;
+}
+
+.toy-preview .actions button,
+.toy-preview .actions a {
+  margin-bottom: 5px;
+  margin-right: 10px;
+  padding: 5px 10px;
+  text-decoration: none;
+  color: #fff;
+  background-color: #2d52da;
+  border: none;
+  border-radius: 4px;
+}
+
+.toy-preview .actions button:hover,
+.toy-preview .actions a:hover {
+  background-color: #2d52da;
+  cursor: pointer;
+}
+
+.toy-preview:nth-child(n){
+  background-color: #32919c;
+}
+

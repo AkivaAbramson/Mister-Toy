@@ -1,5 +1,10 @@
 <template>
     <section v-if="toy" class="toy-edit flex justify-center align-center">
+        <ul>{{ toy.name }}</ul>
+        <ul>{{ toy.price }}</ul>
+        <ul>
+            <li v-for="label in toy.labels" :key="label">{{ label }}</li>
+        </ul>
         <form @submit.prevent="saveToy"
               class="flex space-between align-center">
           <input class="input" v-model="toy.name" type="text">

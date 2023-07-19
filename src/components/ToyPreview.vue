@@ -1,11 +1,12 @@
 <template>
-    <li class="toy-preview flex space-between">
-        <p> {{ toy.name }}</p>
-        <p> Price:{{ toy.price }}</p>
-        <!-- <br>
-        <p>in Stock? {{ toy.inStock }}</p> -->
+    <li class="toy-preview">
+        <ul>{{ toy.name }}</ul>
+        <ul>${{ toy.price }}</ul>
+        <ul>
+            <li v-for="label in toy.labels" :key="label">{{ label }}</li>
+        </ul>
 
-        <div class="tools flex">
+        <div class="actions">
             <button @click="$emit('removed')" class="btn">
                 <span>x</span>
             </button>
