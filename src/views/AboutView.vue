@@ -3,7 +3,7 @@
     <h1>This is an about page</h1>
   </div>
   <GoogleMap
-      api-key="AIzaSyAnbTuVXoF2tUKkZvxkYf3PkP-GX0nAvsA"
+      api-key="API_KEY"
       style="width: 50%; height: 300px"
       :center="pos1"
       :zoom="15"
